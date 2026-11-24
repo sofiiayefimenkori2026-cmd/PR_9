@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build All",
+            "command": "make all",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "type": "shell",
+            "label": "Run All Tests",
+            "command": "make check",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "type": "shell",
+            "label": "Build Lab_09_1",
+            "command": "make Lab_09_1",
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "type": "shell",
+            "label": "Build Lab_09_2_1",
+            "command": "make Lab_09_2_1_b1 Lab_09_2_1_b2",
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

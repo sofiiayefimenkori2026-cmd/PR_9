@@ -1,0 +1,29 @@
+# Binaries & build artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dSYM/
+build/
+bin/
+
+# Compiled executables
+Lab_09_1
+Lab_09_2_1
+Lab_09_2_1_b1
+Lab_09_2_1_b2
+tests/UnitTest_09_1
+tests/UnitTest_09_2_1
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# VS Code / IDE caches
+.vscode/.browse.c_cpp.db*
+.idea/
+*.suo
+*.user

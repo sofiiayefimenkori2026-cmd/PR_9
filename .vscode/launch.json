@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Lab_09_1",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/Lab_09_1",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "Build Lab_09_1"
+        },
+        {
+            "name": "Debug Lab_09_2_1 (Branch 1: Z=15)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/Lab_09_2_1_b1",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "Build Lab_09_2_1"
+        },
+        {
+            "name": "Debug UnitTest_09_1",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/tests/UnitTest_09_1",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "Run All Tests"
+        }
+    ]
+}
