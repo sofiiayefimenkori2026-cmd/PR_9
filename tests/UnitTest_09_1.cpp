@@ -6,9 +6,9 @@
 #if defined(_MSC_VER)
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../var.h"
-#include "../dod.h"
-#include "../sum.h"
+#include "../PR_9.1/var.h"
+#include "../PR_9.1/dod.h"
+#include "../PR_9.1/sum.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace nsVar;
@@ -24,9 +24,8 @@ namespace UnitTest091
         {
             x = 2.0;
             n = 1;
-            a = -1.0 / x; // -0.5
+            a = -1.0 / x;
             dod();
-            // a_1 = 1 / (3 * 2^3) = 1 / 24 ≈ 0.04166667
             Assert::AreEqual(1.0 / 24.0, a, 1e-7);
         }
 
@@ -52,9 +51,9 @@ namespace UnitTest091
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include <cmath>
-#include "../var.h"
-#include "../dod.h"
-#include "../sum.h"
+#include "../PR_9.1/var.h"
+#include "../PR_9.1/dod.h"
+#include "../PR_9.1/sum.h"
 
 using namespace nsVar;
 using namespace nsDod;
@@ -64,9 +63,8 @@ TEST_CASE("Test nsDod::dod()")
 {
     x = 2.0;
     n = 1;
-    a = -1.0 / x; // a_0 = -0.5
+    a = -1.0 / x;
     dod();
-    // a_1 = 1 / (3 * 2^3) = 1 / 24
     CHECK(a == doctest::Approx(1.0 / 24.0).epsilon(1e-6));
 }
 

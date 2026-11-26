@@ -15,12 +15,17 @@ Lab_09_2_1_b1
 Lab_09_2_1_b2
 tests/UnitTest_09_1
 tests/UnitTest_09_2_1
+PR_9.1/UnitTest_09_1
+PR_9.2_1/UnitTest_09_2_1
 
-# OS files
+# OS & Office files
 .DS_Store
 Thumbs.db
 *.swp
 *~
+~*
+~$*
+*.tmp
 
 # VS Code / IDE caches
 .vscode/.browse.c_cpp.db*

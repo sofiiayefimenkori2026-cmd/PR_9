@@ -10,22 +10,22 @@ all: programs tests
 
 programs: $(PROGRAMS)
 
-Lab_09_1: var.cpp dod.cpp sum.cpp Lab_09_1.cpp var.h dod.h sum.h
-	$(CXX) $(CXXFLAGS) var.cpp dod.cpp sum.cpp Lab_09_1.cpp -o $@
+Lab_09_1: PR_9.1/var.cpp PR_9.1/dod.cpp PR_9.1/sum.cpp PR_9.1/Lab_09_1.cpp PR_9.1/var.h PR_9.1/dod.h PR_9.1/sum.h
+	$(CXX) $(CXXFLAGS) -IPR_9.1 PR_9.1/var.cpp PR_9.1/dod.cpp PR_9.1/sum.cpp PR_9.1/Lab_09_1.cpp -o $@
 
-Lab_09_2_1_b1: Lab_09_2_1.cpp macros.h
-	$(CXX) $(CXXFLAGS) -DZ=15 Lab_09_2_1.cpp -o $@
+Lab_09_2_1_b1: PR_9.2_1/Lab_09_2_1.cpp PR_9.2_1/macros.h
+	$(CXX) $(CXXFLAGS) -IPR_9.2_1 -DZ=15 PR_9.2_1/Lab_09_2_1.cpp -o $@
 
-Lab_09_2_1_b2: Lab_09_2_1.cpp macros.h
-	$(CXX) $(CXXFLAGS) -DZ=5 Lab_09_2_1.cpp -o $@
+Lab_09_2_1_b2: PR_9.2_1/Lab_09_2_1.cpp PR_9.2_1/macros.h
+	$(CXX) $(CXXFLAGS) -IPR_9.2_1 -DZ=5 PR_9.2_1/Lab_09_2_1.cpp -o $@
 
 tests: $(TESTS)
 
-tests/UnitTest_09_1: tests/UnitTest_09_1.cpp var.cpp dod.cpp sum.cpp var.h dod.h sum.h tests/doctest.h
-	$(CXX) $(CXXFLAGS) -I. -Itests var.cpp dod.cpp sum.cpp tests/UnitTest_09_1.cpp -o $@
+tests/UnitTest_09_1: tests/UnitTest_09_1.cpp PR_9.1/var.cpp PR_9.1/dod.cpp PR_9.1/sum.cpp PR_9.1/var.h PR_9.1/dod.h PR_9.1/sum.h tests/doctest.h
+	$(CXX) $(CXXFLAGS) -IPR_9.1 -Itests PR_9.1/var.cpp PR_9.1/dod.cpp PR_9.1/sum.cpp tests/UnitTest_09_1.cpp -o $@
 
-tests/UnitTest_09_2_1: tests/UnitTest_09_2_1.cpp macros.h tests/doctest.h
-	$(CXX) $(CXXFLAGS) -I. -Itests tests/UnitTest_09_2_1.cpp -o $@
+tests/UnitTest_09_2_1: tests/UnitTest_09_2_1.cpp PR_9.2_1/macros.h tests/doctest.h
+	$(CXX) $(CXXFLAGS) -IPR_9.2_1 -Itests tests/UnitTest_09_2_1.cpp -o $@
 
 test: check
 check: tests
@@ -39,4 +39,4 @@ check: tests
 	@echo "=================================================="
 
 clean:
-	rm -rf $(PROGRAMS) $(TESTS) *.dSYM tests/*.dSYM
+	rm -rf $(PROGRAMS) $(TESTS) *.dSYM tests/*.dSYM PR_9.1/*.dSYM PR_9.2_1/*.dSYM
