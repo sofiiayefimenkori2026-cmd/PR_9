@@ -31,7 +31,7 @@ int main()
     cout << "------------------------------------------------------------" << endl;
 
     x = x_p;
-    while (x <= x_k + dx / 2.0) {
+    while (x <= x_k + 1e-9) {
         sum();
         double exact = atan(x);
         double diff = fabs(s - exact);
