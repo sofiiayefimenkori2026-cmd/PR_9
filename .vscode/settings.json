@@ -1,10 +1,16 @@
 {
+    "testMate.cpp.test.executables": "tests/UnitTest_*",
+    "testMate.cpp.test.parallelExecutionLimit": 1,
+    "testMate.cpp.discovery.gracePeriodForMissing": 10,
     "files.associations": {
         "iostream": "cpp",
         "cmath": "cpp",
         "iomanip": "cpp",
-        "cstdio": "cpp"
+        "cstdio": "cpp",
+        "doctest.h": "cpp"
     },
     "C_Cpp.default.cppStandard": "c++17",
-    "C_Cpp.default.cStandard": "c17"
+    "C_Cpp.default.cStandard": "c17",
+    "editor.tabSize": 4,
+    "files.encoding": "utf8"
 }
