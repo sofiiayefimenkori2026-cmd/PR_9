@@ -2,14 +2,37 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "shell",
-            "label": "Build All",
-            "command": "make all",
+            "type": "cppbuild",
+            "label": "C/C++: g++ build active project",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                "-g",
+                "*.cpp",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": ["$gcc"]
+            "detail": "Compiler: /usr/bin/g++ (compiles all modules in folder)"
+        },
+        {
+            "type": "shell",
+            "label": "Build All",
+            "command": "make all",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
         },
         {
             "type": "shell",
@@ -19,21 +42,9 @@
                 "kind": "test",
                 "isDefault": true
             },
-            "problemMatcher": ["$gcc"]
-        },
-        {
-            "type": "shell",
-            "label": "Build Lab_09_1",
-            "command": "make Lab_09_1",
-            "group": "build",
-            "problemMatcher": ["$gcc"]
-        },
-        {
-            "type": "shell",
-            "label": "Build Lab_09_2_1",
-            "command": "make Lab_09_2_1_b1 Lab_09_2_1_b2",
-            "group": "build",
-            "problemMatcher": ["$gcc"]
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }

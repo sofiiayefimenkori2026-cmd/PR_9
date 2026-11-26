@@ -1,4 +1,4 @@
-CXX = clang++
+CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -O2
 
 PROGRAMS = Lab_09_1 Lab_09_2_1_b1 Lab_09_2_1_b2
